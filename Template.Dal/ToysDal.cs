@@ -29,7 +29,7 @@ namespace Pets.Dal
         {
             using (var db = new PetsDbContext())
             {
-                List<Toy> dogToyList = db.Toys.ToList().FindAll(x => x.Animal == Animal.Dog);
+                List<Toy> dogToyList = db.Toys.ToList().FindAll(x => x.AnimalType == AnimalType.Dog);
                 return dogToyList;
             }
         }
@@ -38,7 +38,7 @@ namespace Pets.Dal
         {
             using (var db = new PetsDbContext())
             {
-                List<Toy> catToyList = db.Toys.ToList().FindAll(x => x.Animal == Animal.Cat);
+                List<Toy> catToyList = db.Toys.ToList().FindAll(x => x.AnimalType == AnimalType.Cat);
                 return catToyList;
             }
         }
