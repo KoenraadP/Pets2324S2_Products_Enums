@@ -27,14 +27,14 @@ namespace Pets.Bll
             return Guid.TryParse(id, out var newGuid) ? FoodDal.Read(newGuid) : new Food();
         }
 
-        public static bool Create(string name, string description, Animal animal, Brand brand, decimal price)
+        public static bool Create(string name, string description, AnimalType animalType, Brand brand, decimal price)
         {
             Food food = new Food
             {
                 ProductId = Guid.NewGuid(),
                 Name = name,
                 Description = description,
-                Animal = animal,
+                AnimalType = animalType,
                 Brand = brand,
                 Price = price
             };

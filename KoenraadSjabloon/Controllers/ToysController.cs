@@ -32,9 +32,9 @@ namespace KoenraadSjabloon.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(string name, string description, Animal animal, Brand brand, decimal price)
+        public ActionResult Create(string name, string description, AnimalType animalType, Brand brand, decimal price)
         {
-            Toys.Create(name, description, animal, brand, price);
+            Toys.Create(name, description, animalType, brand, price);
 
             return View();
         }
